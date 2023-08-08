@@ -1,13 +1,78 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.25%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: white;
+  font-family: sans-serif;
+}
+
+.card {
+  width: 30%;
+  margin: 20rem auto;
+  border: 2px solid black;
+}
+
+img {
+  height: 25%;
+  width: 100%;
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+h3,
+p,
+.skills {
+  padding: 0 2rem;
+}
+
+.skills {
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.skills > * {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  border-radius: 100vmax;
+  margin: 0.5rem 1rem;
+}
+
+.html {
+  background-color: cornflowerblue;
+}
+.javascript {
+  background-color: gold;
+}
+.react {
+  background-color: yellowgreen;
+}
+.svelte {
+  background-color: orangered;
+}
+.webdesign {
+  background-color: burlywood;
 }

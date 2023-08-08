@@ -18,15 +18,13 @@ body {
 
 .card {
   width: 30%;
-  margin: 20rem auto;
+  margin: 0 auto;
   border: 2px solid black;
 }
 
-img {
-  height: 25%;
+.avatar {
   width: 100%;
   display: block;
-  margin-bottom: 3.2rem;
 }
 
 h3 {
@@ -40,39 +38,20 @@ p {
   line-height: 1.5;
 }
 
-h3,
-p,
-.skills {
-  padding: 0 2rem;
+.data {
+  padding: 3.2rem 2rem 0.2rem 2rem;
 }
 
 .skills {
-  padding: 0 2rem;
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.skills > * {
-  display: inline-block;
+.skill {
   padding: 0.5rem 2rem;
-  text-align: center;
   border-radius: 100vmax;
-  margin: 0.5rem 1rem;
-}
-
-.html {
-  background-color: cornflowerblue;
-}
-.javascript {
-  background-color: gold;
-}
-.react {
-  background-color: yellowgreen;
-}
-.svelte {
-  background-color: orangered;
-}
-.webdesign {
-  background-color: burlywood;
+  margin: 0.5rem;
 }

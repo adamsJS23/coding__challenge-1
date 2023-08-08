@@ -5,14 +5,23 @@ function App() {
   return (
     <div className="card">
       <Avatar />
-      <Intro />
-      <Skills />
+      <div className="data">
+        <Intro />
+        <div className="skills">
+          <Skill bgColor="cornflowerblue" skill="HTML+CSS" emoji="🪔" />
+          <Skill bgColor="gold" skill="Javascript" emoji="🏄‍♂️" />
+          <Skill bgColor="yellowgreen" skill="React" emoji="🫰" />
+          <Skill bgColor="orangered" skill="Svelte" emoji="💊" />
+          <Skill bgColor="burlywood" skill="Webdesign" emoji="✒️" />
+          <Skill bgColor="rosybrown" skill="Git and GitHub" emoji="⚒️" />
+        </div>
+      </div>
     </div>
   );
 }
 
 function Avatar() {
-  return <img src="spinaci.jpg" alt="Adam foto" />;
+  return <img className="avatar" src="spinaci.jpg" alt="Adam foto" />;
 }
 
 function Intro() {
@@ -28,14 +37,12 @@ function Intro() {
   );
 }
 
-function Skills() {
+function Skill(props) {
+  console.log(props);
   return (
-    <div className="skills">
-      <span className="html">HTML+CSS</span>
-      <span className="javascript">Javascript</span>
-      <span className="react">React</span>
-      <span className="svelte">Svelte</span>
-      <span className="webdesign">Webdesign</span>
+    <div className="skill" style={{ backgroundColor: props.bgColor }}>
+      <span>{props.skill}</span>
+      <span>{props.emoji}</span>
     </div>
   );
 }

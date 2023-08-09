@@ -35,7 +35,7 @@ const skills = [
   },
 ];
 
-const levels = { beginner: "👼", intermediate: "👍", advanced: "💪" };
+// const levels = { beginner: "👼", intermediate: "👍", advanced: "💪" };
 
 function App() {
   return (
@@ -45,7 +45,13 @@ function App() {
         <Intro />
         <div className="skills">
           {skills.map((skill) => {
-            return <Skill skillObj={skill} />;
+            return (
+              <Skill
+                skill={skill.skill}
+                color={skill.color}
+                level={skill.level}
+              />
+            );
           })}
         </div>
       </div>
@@ -54,7 +60,7 @@ function App() {
 }
 
 function Avatar() {
-  return <img className="avatar" src="spinaci.jpg" alt="Adam foto" />;
+  return <img className="avatar" src="jonas.jpeg" alt="Adam foto" />;
 }
 
 function Intro() {
@@ -70,11 +76,16 @@ function Intro() {
   );
 }
 
-function Skill({ skillObj }) {
+function Skill({ skill, color, level }) {
   return (
-    <div className="skill" style={{ backgroundColor: skillObj.color }}>
-      <span>{skillObj.skill}</span>
-      <span>{levels[skillObj.level]}</span>
+    <div className="skill" style={{ backgroundColor: color }}>
+      <span>{skill}</span>
+      {/* <span>{levels[skillObj.level]}</span> */}
+      <span>
+        {level === "advanced" && "💪"}
+        {level === "intermediate" && "👍"}
+        {level === "beginner" && "👼"}
+      </span>
     </div>
   );
 }
